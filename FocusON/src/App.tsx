@@ -1,12 +1,16 @@
-import './App.css'
+import './styles/App.css'
+import { BrowserRouter } from 'react-router-dom'
+import { AppRoutes } from './routes/AppRoutes'
+import { TaskContextProvider } from './context/TaskContext'
 
 function App() {
- 
 
   return (
-    <>
-      <h1 className='text-3xl bg-gray-500'>test</h1>
-    </>
+   <BrowserRouter>    
+      <TaskContextProvider>
+          <AppRoutes />
+      </TaskContextProvider>
+   </BrowserRouter>
   )
 }
 
